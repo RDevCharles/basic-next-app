@@ -16,12 +16,113 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes lightPassing {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  10% {
+    background-position: 5% 50%;
+  }
+  20% {
+    background-position: 10% 50%;
+  }
+  /* Continue adding keyframes with larger color shifts */
+  /* For example, 30%, 40%, 50%, and so on... */
 }
+
+body {
+  background: linear-gradient(
+    135deg,
+    rgba(53, 214, 234, 0.8),
+    rgba(61, 115, 232, 0.8),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8),
+    rgba(61, 115, 232, 0.8),
+    rgba(53, 214, 234, 0.8),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8),
+    rgba(61, 115, 232, 0.8)
+  );
+  background-size: 2000% 100%;
+  animation: lightPassing 30s linear infinite;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: none;
+}
+
+
+input[type="submit"] {
+  
+  background-color: #FF6347; /* Orange color */
+color: white; /* Text color on the button */
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+button {
+  
+  background-color: #FF6347; /* Orange color */
+color: white; /* Text color on the button */
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 5px 0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}
+
+.no-items {
+  text-align: center;
+  color: #888;
+  margin-top: 10px;
+}
+
